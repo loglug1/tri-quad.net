@@ -1,10 +1,15 @@
 html {
-	background-color: black;
+	background-color: white;
 	color: white;
+}
+.nav-container {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 }
 main {
 	display: grid;
-  grid-template-columns: auto auto;
+	grid-template-columns: auto auto;
 }
 .white-background {
 	background-color: white;
@@ -13,26 +18,25 @@ main {
 body {
 	margin: 0;
 }
-.grid-object p {
-	padding: 1em;
-}
 .grid-object h2 {
-	padding-left: 1em;
+	padding-left: 0.2em;
+	font-size: 2em;
+	margin: 0.2em;
 }
 header {
 	background-image: url("background.png");
-  background-repeat: no-repeat;
+	background-repeat: no-repeat;
 	background-position: center;
 	text-align: center;
 	padding: 1em;
 	line-height: 60px;
-  padding-top: 2.2em;
+	padding-top: 2.2em;
 }
 #name {
 	background-color: rgba(0,0,0,0.3);
 	display: inline;
 	padding: 0.2em;
-	border-radius: 10%;
+	border-radius: 30px;
 	font-family: 'Roboto', sans-serif;
 }
 #pic {
@@ -44,24 +48,63 @@ header {
 .green {
 	color: lime;
 }
-nav > .green {
-  padding: 0 0.25em 0 0.25em;
+.nav-link {
+	padding: 0 0.25em 0 0.25em;
 }
 .roboto {
 	font-family: 'Roboto', sans-serif;
 }
-.card {
-	background-color: #e4e4e4;
-	margin-right: 5px;
-	margin-left: 5px;
-	border-radius: 5px;
+.firamono {
+	font-family: 'Fira Mono', monospace;
 }
-ol {
+ul.card {
 	padding: 16px 16px 16px 40px;
 }
-nav {
-  padding: 0.1em;
-  position: fixed;
-  background-color: black;
-  width: 100%
+.card {
+	margin-right: 0.3vw;
+	margin-left: 0.3vw;
+	margin-top: 0;
+	margin-bottom: 16px;
+	border-radius: 30px;
+	padding: 1em;
+}
+.gray-background {
+	background-color: #e4e4e4;
+}
+.black-background {
+	background-color: black;
+}
+.desktop-nav {
+	display: block;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	background-color: black;
+	width: 100%
+}
+.mobile-nav {
+	display: none;
+}
+.mobile-nav-button {
+	font-size: 2em;
+}
+@media only screen and (max-width : 640px) {
+	main {
+		grid-template-columns: 100%;
+	}
+	.desktop-nav {
+		display: none;
+		height: 100%;
+	}
+	.mobile-nav {
+		display: block;
+		background-color: black;
+		width: 100%;
+	}
+	.nav-link {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		font-size: 2em;
+		display: block;
+	}
 }
