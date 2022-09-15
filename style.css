@@ -1,0 +1,67 @@
+html {
+	background-color: black;
+	color: white;
+}
+main {
+	display: grid;
+  grid-template-columns: auto auto;
+}
+.white-background {
+	background-color: white;
+	color: black;
+}
+body {
+	margin: 0;
+}
+.grid-object p {
+	padding: 1em;
+}
+.grid-object h2 {
+	padding-left: 1em;
+}
+header {
+	background-image: url("background.png");
+  background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	padding: 1em;
+	line-height: 60px;
+  padding-top: 2.2em;
+}
+#name {
+	background-color: rgba(0,0,0,0.3);
+	display: inline;
+	padding: 0.2em;
+	border-radius: 10%;
+	font-family: 'Roboto', sans-serif;
+}
+#pic {
+	height: 136px;
+	width: auto;
+	border-radius: 100%;
+	border: 2px solid black;
+}
+.green {
+	color: lime;
+}
+nav > .green {
+  padding: 0 0.25em 0 0.25em;
+}
+.roboto {
+	font-family: 'Roboto', sans-serif;
+}
+.card {
+	background-color: #e4e4e4;
+	margin-right: 5px;
+	margin-left: 5px;
+	border-radius: 5px;
+}
+ol {
+	padding: 16px 16px 16px 40px;
+}
+nav {
+  padding: 0.1em;
+  position: fixed;
+  background-color: black;
+  width: 100%
+}
