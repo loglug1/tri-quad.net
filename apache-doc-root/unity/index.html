@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
   <body>
       <nav class="black-background nav-container">
@@ -117,6 +118,7 @@
       <script>
           const desktopNav = document.querySelector('.desktop-nav');
           const navContainer = document.querySelector('.nav-container');
+          const gameCanvas = document.querySelector('#unity-container');
           var scrollLocation;
 
           function navButton() {
@@ -126,10 +128,14 @@
                   //show links
                   desktopNav.style.display = 'block';
                   navContainer.style.height = '100vh';
+                  //hide player
+                  gameCanvas.style.display = 'none';
               } else {
                   //hide links
                   desktopNav.style = null;
                   navContainer.style = null;
+                  //show player
+                  gameCanvas.style = null;
                   //restore scroll location after
                   window.scrollTo(0, scrollLocation);
               }
